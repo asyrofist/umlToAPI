@@ -1,0 +1,157 @@
+swagger: '2.0'
+info:
+  description: ''
+  title: Class_Dashboard
+  version: ''
+paths:
+  /alternatifDashboard:
+    get:
+      produces:
+        - application/json
+      parameters:
+        - description: missing description
+          in: query
+          name: alternatifDashboard
+          required: false
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            items:
+              properties:
+                alternatifDashboard:
+                  $ref: '#/definitions/AlternatifDashboard'
+              type: object
+            type: array
+      tags:
+        - alternatifDashboard
+      description: Get a list of alternatifDashboard
+    post:
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - description: ''
+          in: body
+          name: body
+          required: true
+          schema:
+            properties:
+              alternatifDashboard:
+                $ref: '#/definitions/AlternatifDashboard'
+            type: object
+      responses:
+        '201':
+          description: Created
+          schema:
+            properties:
+              alternatifDashboard:
+                $ref: '#/definitions/AlternatifDashboard'
+            type: object
+      tags:
+        - alternatifDashboard
+      description: Create a new alternatifDashboard
+  /dashboard:
+    get:
+      produces:
+        - application/json
+      parameters:
+        - description: missing description
+          in: query
+          name: data
+          required: false
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            items:
+              properties:
+                dashboard:
+                  $ref: '#/definitions/Dashboard'
+              type: object
+            type: array
+      tags:
+        - dashboard
+      description: Get a list of dashboard
+    post:
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - description: ''
+          in: body
+          name: body
+          required: true
+          schema:
+            properties:
+              dashboard:
+                $ref: '#/definitions/Dashboard'
+            type: object
+      responses:
+        '201':
+          description: Created
+          schema:
+            properties:
+              dashboard:
+                $ref: '#/definitions/Dashboard'
+            type: object
+      tags:
+        - dashboard
+      description: Create a new dashboard
+definitions:
+  AlternatifDashboard:
+    allOf:
+      - $ref: '#/definitions/Dashboard'
+      - type: object
+    description: ''
+    properties:
+      alamat:
+        description: missing description
+        type: string
+      divisi:
+        description: missing description
+        type: string
+      email:
+        description: missing description
+        type: string
+      jabatan:
+        description: missing description
+        type: string
+      level:
+        description: missing description
+        type: string
+      nama:
+        description: missing description
+        type: string
+      namaUser:
+        description: missing description
+        type: string
+      nomorHandphone:
+        description: missing description
+        type: string
+      password:
+        description: missing description
+        type: string
+      username:
+        description: missing description
+        type: string
+    type: object
+  Dashboard:
+    description: ''
+    properties:
+      captcha:
+        description: missing description
+        type: string
+      password:
+        description: missing description
+        type: string
+      username:
+        description: missing description
+        type: string
+    type: object
+x-components: {}
+

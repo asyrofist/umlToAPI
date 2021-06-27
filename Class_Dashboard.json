@@ -1,0 +1,243 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "",
+        "title": "Class_Dashboard",
+        "version": ""
+    },
+    "servers": [],
+    "paths": {
+        "/alternatifDashboard": {
+            "get": {
+                "tags": [
+                    "alternatifDashboard"
+                ],
+                "description": "Get a list of alternatifDashboard",
+                "parameters": [
+                    {
+                        "name": "alternatifDashboard",
+                        "in": "query",
+                        "description": "missing description",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "alternatifDashboard": {
+                                                "$ref": "#/components/schemas/AlternatifDashboard"
+                                            }
+                                        }
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "alternatifDashboard"
+                ],
+                "description": "Create a new alternatifDashboard",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "alternatifDashboard": {
+                                        "$ref": "#/components/schemas/AlternatifDashboard"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "description": "",
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "alternatifDashboard": {
+                                            "$ref": "#/components/schemas/AlternatifDashboard"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/dashboard": {
+            "get": {
+                "tags": [
+                    "dashboard"
+                ],
+                "description": "Get a list of dashboard",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "query",
+                        "description": "missing description",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "dashboard": {
+                                                "$ref": "#/components/schemas/Dashboard"
+                                            }
+                                        }
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "dashboard"
+                ],
+                "description": "Create a new dashboard",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "dashboard": {
+                                        "$ref": "#/components/schemas/Dashboard"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "description": "",
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "dashboard": {
+                                            "$ref": "#/components/schemas/Dashboard"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Created"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AlternatifDashboard": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "namaUser": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "jabatan": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "divisi": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "level": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "nama": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "alamat": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "nomorHandphone": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "missing description",
+                        "type": "string"
+                    }
+                },
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/Dashboard"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "Dashboard": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "captcha": {
+                        "description": "missing description",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
