@@ -13,5 +13,5 @@ how to run
     fileYaml = 'swagger.yaml'
 
 more info
-https://github.com/LucyBot-Inc/api-spec-converter.git
-https://edi3.org/specs/edi3-uml-profile/develop/
+1. https://github.com/LucyBot-Inc/api-spec-converter.git
+2. https://edi3.org/specs/edi3-uml-profile/develop/
