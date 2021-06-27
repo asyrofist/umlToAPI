@@ -4,11 +4,17 @@ kemudian, merubah file openapi3 menjadi swagger2
 
 how to run
 1. make venv
-    python -m venv <folder>
+```bash
+python -m venv <folder>
+```
 2. run python
+```
     python test.py
+```
 3. how to convert
+```
     api-spec-converter --from=openapi_3 --to=swagger_2 --syntax=yaml Class_Dashboard.yml > swagger.yaml
+```
 4. change variable test.py
     fileYaml = 'swagger.yaml'
 
