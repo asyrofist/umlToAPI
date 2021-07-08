@@ -13,7 +13,7 @@ python -m venv <folder>
 ```
 3. how to convert
 ```
-    api-spec-converter --from=openapi_3 --to=swagger_2 --syntax=yaml Class_Dashboard.yml > swagger.yaml
+    api-spec-converter --from=openapi_3 --to=swagger_2 --syntax=yaml <file_name>.yml > <file_name>.yaml
 ```
 4. change variable test.py
     fileYaml = 'swagger.yaml'
